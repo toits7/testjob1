@@ -14,7 +14,8 @@ services:
       start_period: 40s
 
   proxy:
-    image: nginx:alpine
+    build:
+      dockerfile: proxy/Dockerfile
     container_name: proxy
     restart: always
     ports:
