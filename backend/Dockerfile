@@ -1,3 +1,5 @@
+ARG HTTP_SERVER_PORT
+
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -10,6 +12,6 @@ COPY backend/main.py .
 
 COPY .env .
 
-EXPOSE 8080
+EXPOSE ${HTTP_SERVER_PORT}
 
 CMD ["python", "main.py"]

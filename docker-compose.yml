@@ -7,7 +7,7 @@ services:
     networks:
         - app_network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      test: ["CMD", "curl", "-f", "http://localhost:${HTTP_SERVER_PORT}/"]
       interval: 30s
       timeout: 10s
       retries: 3
