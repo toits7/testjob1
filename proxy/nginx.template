@@ -1,0 +1,5 @@
+http {
+    upstream web_app {
+        server backend:${HTTP_SERVER_PORT};
+    }
+}
