@@ -2,7 +2,7 @@
 git clone https://github.com/toits7/testjob1.git
 создаем в корне файл .env
 записываем в файл переменные окружения
-HTTP_SERVER_PORT='8080'
+echo "HTTP_SERVER_PORT='8080'" > .env
 запускаем
 docker compose up -d
 проверяем 
