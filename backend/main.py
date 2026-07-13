@@ -18,11 +18,7 @@ class MyHttpHandler(BaseHTTPRequestHandler):
 if __name__ == '__main__':
     try:
         load_dotenv()
-        #host = os.getenv('HTTP_SERVER_HOST')
         str_port = os.getenv('HTTP_SERVER_PORT')
-        # if host is None:
-        #     print(f"Starting http server failed: unknown host")
-        #     sys.exit(2)
         if str_port is None:
             print(f"Starting http server failed: unknown port")
             sys.exit(3)
