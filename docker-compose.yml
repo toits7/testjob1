@@ -17,8 +17,6 @@ services:
       start_period: 40s
 
   proxy:
-    # build:
-    #   dockerfile: proxy/Dockerfile
     image: nginx:alpine
     environment:
       - HTTP_SERVER_PORT=${HTTP_SERVER_PORT:-8080}
