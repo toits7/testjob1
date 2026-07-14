@@ -1,9 +1,11 @@
 FROM nginx:alpine
 
-COPY proxy/nginx.template /etc/nginx/nginx.template
+#COPY proxy/http.conf.template /etc/nginx/http.conf.template
 
-COPY proxy/entrypoint.sh /entrypoint.sh
+#COPY proxy/entrypoint.sh /entrypoint.sh
 
-RUN chmod +x /entrypoint.sh
+#RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+#ENTRYPOINT ["/entrypoint.sh"]
+
+

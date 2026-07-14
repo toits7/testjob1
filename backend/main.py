@@ -1,5 +1,5 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import os
 import sys
 
@@ -9,7 +9,7 @@ class MyHttpHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
-            self.wfile.write(b'Hello from Effective Mobile!')
+            self.wfile.write(b'Hello from Effective Mobile!\n')
         else:
             self.send_response(404)
             self.end_headers()
@@ -17,7 +17,7 @@ class MyHttpHandler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     try:
-        load_dotenv()
+        #load_dotenv()
         str_port = os.getenv('HTTP_SERVER_PORT')
         if str_port is None:
             print(f"Starting http server failed: unknown port")

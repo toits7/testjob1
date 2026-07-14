@@ -1,3 +1,3 @@
 #!/bin/sh
-envsubst < /etc/nginx/nginx.template > /etc/nginx/conf.d/default.conf
+cat /etc/nginx/http.conf.template | envsubst '$HTTP_SERVER_PORT' > /etc/nginx/conf.d/http.conf
 exec nginx -g "daemon off;"
